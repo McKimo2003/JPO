@@ -1,10 +1,49 @@
-#include "MainFrame.h"
+﻿#include "MainFrame.h"
 #include <wx/wx.h>
+//#include <BoostPropertyTree>
 
-MainFrame::MainFrame(const wxString& title) :wxFrame(nullptr,wxID_ANY,title) {
+using namespace std;
+
+MainFrame::MainFrame(const wxString& title) :wxFrame(nullptr, wxID_ANY, title) {
 	wxPanel* panel = new wxPanel(this);
 
-	wxButton* button = new wxButton(panel,wxID_ANY,"Przycisk",wxPoint(275,375),wxSize(250,50));
+	wxButton* download = new wxButton(panel, wxID_ANY, "POBIERZ DANE!", wxPoint(380, 10), wxSize(150, 30), wxBU_EXACTFIT);
+	download->Bind(wxEVT_BUTTON,&MainFrame::onDownloadClick,this);
 
-	wxCheckBox* checkbox = new wxCheckBox(panel,wxID_ANY,"CheckBox-Test",wxPoint(250,275));
+	CreateStatusBar();
+
+	wxStaticText* statictext = new wxStaticText(panel, wxID_ANY, "Wybierz stacje pogodowa", wxPoint(380, 50));
+	statictext->SetBackgroundColour(*wxLIGHT_GREY);
+
+	wxArrayString choices;
+	for (int i = 0; i < 100; i++) {
+		choices.Add("ItemA");
+	}
+	wxChoice* choice = new wxChoice(panel, wxID_ANY, wxPoint(380, 70), wxSize(150, 100), choices, wxCB_SORT);
+
+	wxStaticText* statictext2 = new wxStaticText(panel, wxID_ANY, "Wybierz stanowiska pomiarowe", wxPoint(380, 100));
+	statictext2->SetBackgroundColour(*wxCYAN);
+
+	wxArrayString choices2;
+	for (int i = 0; i < 100; i++) {
+		choices2.Add("ItemB");
+	}
+	wxChoice* choice2 = new wxChoice(panel, wxID_ANY, wxPoint(380, 120), wxSize(150, 100), choices2, wxCB_SORT);
+
+	wxButton* accept = new wxButton(panel, wxID_ANY, "Zatwierdz", wxPoint(380, 150), wxSize(150, 30), wxBU_EXACTFIT);
+	accept->Bind(wxEVT_BUTTON, &MainFrame::onAcceptClick, this);
 }
+
+void MainFrame::onDownloadClick(wxCommandEvent& evt) {
+	wxLogMessage("Pobieranie danych...");
+	evt.Skip();
+}
+
+void MainFrame::onAcceptClick(wxCommandEvent& evt) {
+	wxLogStatus("Dane wyswietlaja sie...");
+	evt.Skip();
+}
+
+/*void MainFrame::onChoiceChange(wxCommandEvent& evt) {
+	wxString str = wxString::Format();
+}*/
