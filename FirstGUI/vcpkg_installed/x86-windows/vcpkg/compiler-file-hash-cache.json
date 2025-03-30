@@ -1,0 +1,14 @@
+{
+  "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x64/cl.exe" : 
+  {
+    "hash" : "8b429a511900c6e301f2ae864c202065ee68b08d",
+    "size" : 402384,
+    "timestamp" : 1651784998
+  },
+  "C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.29.30133/bin/Hostx64/x86/cl.exe" : 
+  {
+    "hash" : "73bfef73f5be2e0b2bbef7d5d74d267d0f11f5ae",
+    "size" : 403920,
+    "timestamp" : 1651784999
+  }
+}
