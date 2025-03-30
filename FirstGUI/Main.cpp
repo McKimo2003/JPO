@@ -1,8 +1,4 @@
 #include <wx/wx.h>
-#include <string>
-#include <curl/curl.h>
-#include <json/json.h>
-#include <locale.h>
 #include <iostream>
 #include <string>
 
