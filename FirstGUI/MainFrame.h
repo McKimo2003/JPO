@@ -9,4 +9,5 @@ public:
 private:
 	void onDownloadClick(wxCommandEvent& evt);
 	void onAcceptClick(wxCommandEvent& evt);
+	void onClose(wxCloseEvent& evt);
 };
