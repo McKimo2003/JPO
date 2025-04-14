@@ -99,3 +99,30 @@ Abi: 3e1c816e92f9bb8a2286740b2d76b8e35c22c58220588cd842ca1ef970ad9c41
 Description: Simple DirectMedia Layer is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D.
 Status: install ok installed
 
+Package: nodesoup
+Version: 2023-06-12
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: d955fbabb77ed3cd028b3d3372841dff37a6ba3076a6954510fff00d2baae691
+Description: Force-directed graph layout with Fruchterman-Reingold
+Status: purge ok not-installed
+
+Package: cimg
+Version: 3.5.2
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: b91df4a08f3000a6a2fbe7f72dc7db257a2d69af2c9dea37c125fb4083fcf3e0
+Description: The CImg Library is a small, open-source, and modern C++ toolkit for image processing
+Status: purge ok not-installed
+
+Package: matplotplusplus
+Version: 1.2.1
+Depends: cimg, nodesoup, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 8d8c2f87147ebc8ef0f17cbc77552c8a54dc993f38544d5d5e21cc2f22c36b5c
+Description: A C++ graphics library for data visualization
+Status: purge ok not-installed
+

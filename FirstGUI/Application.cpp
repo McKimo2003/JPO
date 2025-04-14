@@ -13,7 +13,7 @@ wxIMPLEMENT_APP(GUI);
 //GUI z wxwidgets - takie jak wielkosc
 bool GUI::OnInit() {
     MainFrame* mainFrame = new MainFrame("Stacje pogodowe - Projekt JPO");
-    mainFrame->SetClientSize(900, 900);
+    mainFrame->SetClientSize(1600, 900);
     mainFrame->Center();
     mainFrame->Show();
     return true;
@@ -24,6 +24,7 @@ size_t App::WriteCallback(void* contents, size_t size, size_t nmemb, void* userp
     return size * nmemb;
 }
 bool App::performCurlRequest(const string& url, string& response) {
+    try {
     CURL* curl = curl_easy_init();
     if (!curl) {
         cerr << "Failed to initialize CURL" << endl;
@@ -43,6 +44,11 @@ bool App::performCurlRequest(const string& url, string& response) {
     }
 
     return true;
+    } catch (const std::exception& e) {
+        std::cerr << "[B£¥D CURL] " << e.what() << std::endl;
+        return false;
+    }
+
 }
 bool App::parseJsonResponse(const string& jsonResponse, Json::Value& parsedRoot) {
     Json::Reader reader;
@@ -50,7 +56,7 @@ bool App::parseJsonResponse(const string& jsonResponse, Json::Value& parsedRoot)
     bool parsingSuccessful = reader.parse(jsonResponse, parsedRoot);
 
     if (!parsingSuccessful) {
-        cerr << "Failed to parse JSON: " << endl;
+        cerr << "Nie uda³o siê sparsowaæ JSON'a " << endl;
         return false;
     }
 

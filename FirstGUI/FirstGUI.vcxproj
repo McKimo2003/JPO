@@ -20,11 +20,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
+    <ClInclude Include="Graph.h" />
     <ClInclude Include="MainFrame.h" />
     <ClInclude Include="stacja.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Graph.cpp" />
     <ClCompile Include="MainFrame.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -100,7 +102,9 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>Z:\aisd\c++libraries\include\msvc;Z:\aisd\c++libraries\include;C:\Users\szara\vcpkg\installed\x64-windows\lib;C:\Users\szara\vcpkg\installed\x64-windows\include;C:\Users\szara\vcpkg\installed\x86-windows\lib;C:\Users\szara\vcpkg\installed\x86-windows\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Z:\aisd\c++libraries\include\msvc;Z:\aisd\c++libraries\include;C:\Users\szara\vcpkg\installed\x64-windows\lib;C:\Users\szara\vcpkg\installed\x64-windows\include;C:\Users\szara\vcpkg\installed\x86-windows\lib;C:\Users\szara\vcpkg\installed\x86-windows\include;Z:\aisd\mathplot\lib</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -117,7 +121,9 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>Z:\aisd\c++libraries\include\msvc;Z:\aisd\c++libraries\include;C:\Users\szara\vcpkg\installed\x64-windows\lib;C:\Users\szara\vcpkg\installed\x64-windows\include;C:\Users\szara\vcpkg\installed\x86-windows\lib;C:\Users\szara\vcpkg\installed\x86-windows\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Z:\aisd\c++libraries\include\msvc;Z:\aisd\c++libraries\include;C:\Users\szara\vcpkg\installed\x64-windows\lib;C:\Users\szara\vcpkg\installed\x64-windows\include;C:\Users\szara\vcpkg\installed\x86-windows\lib;C:\Users\szara\vcpkg\installed\x86-windows\include;Z:\aisd\mathplot\lib</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -134,7 +140,9 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>Z:\aisd\c++libraries\include\msvc;Z:\aisd\c++libraries\include;C:\Users\szara\vcpkg\installed\x64-windows\lib;C:\Users\szara\vcpkg\installed\x64-windows\include;C:\Users\szara\vcpkg\installed\x86-windows\lib;C:\Users\szara\vcpkg\installed\x86-windows\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Z:\aisd\c++libraries\include\msvc;Z:\aisd\c++libraries\include;C:\Users\szara\vcpkg\installed\x64-windows\lib;C:\Users\szara\vcpkg\installed\x64-windows\include;C:\Users\szara\vcpkg\installed\x86-windows\lib;C:\Users\szara\vcpkg\installed\x86-windows\include;Z:\aisd\mathplot\lib</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -151,7 +159,9 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>Z:\aisd\c++libraries\include\msvc;Z:\aisd\c++libraries\include;C:\Users\szara\vcpkg\installed\x64-windows\lib;C:\Users\szara\vcpkg\installed\x64-windows\include;C:\Users\szara\vcpkg\installed\x86-windows\lib;C:\Users\szara\vcpkg\installed\x86-windows\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>Z:\aisd\c++libraries\include\msvc;Z:\aisd\c++libraries\include;C:\Users\szara\vcpkg\installed\x64-windows\lib;C:\Users\szara\vcpkg\installed\x64-windows\include;C:\Users\szara\vcpkg\installed\x86-windows\lib;C:\Users\szara\vcpkg\installed\x86-windows\include;Z:\aisd\mathplot\lib</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

@@ -23,4 +23,4 @@ Projekt aplikacji pogodowej, ktora sczytuje dane z bazy danych (JSON) oraz pobie
 - posiada dokumentację kodu (Doxygen)
 - jest wyposażony w testy jednostkowe
 
-### Termin: 16.04.2025 lub 23.04.2025
+### Termin: 23.04.2025
