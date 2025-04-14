@@ -1,0 +1,188 @@
+\doxysection{Dokumentacja klasy Main\+Frame}
+\hypertarget{class_main_frame}{}\label{class_main_frame}\index{MainFrame@{MainFrame}}
+
+
+{\ttfamily \#include $<$Main\+Frame.\+h$>$}
+
+Diagram dziedziczenia dla Main\+Frame\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_frame}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_main_frame_a00c85521dad6b24000967206bcc53688}{Main\+Frame}} (const wx\+String \&title)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Metody prywatne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_frame_a6c27ee30e76a4677a56f1bc7bd4dedd6}{on\+Accept\+Click}} (wx\+Command\+Event \&evt)
+\item 
+void \mbox{\hyperlink{class_main_frame_acf3b2061315ea208bcd2a09ca56fa3a8}{on\+Close}} (wx\+Close\+Event \&evt)
+\item 
+void \mbox{\hyperlink{class_main_frame_a1c14bf6ae41fa729b9ca1ef0e44d4d66}{on\+Station\+Select}} (wx\+Command\+Event \&evt)
+\item 
+void \mbox{\hyperlink{class_main_frame_a57733c2a6f23b97a52316a77b8074f91}{on\+Filter\+Click}} (wx\+Command\+Event \&evt)
+\item 
+void \mbox{\hyperlink{class_main_frame_af6f91851c05b34671fcfa631de4c9cbc}{On\+Display\+Data\+Thread\+Event}} (wx\+Thread\+Event \&evt)
+\item 
+void \mbox{\hyperlink{class_main_frame_aead6e28bdc0a15d530a842dd239946fd}{On\+Update\+Graph\+Thread\+Event}} (wx\+Thread\+Event \&evt)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Atrybuty prywatne}
+\begin{DoxyCompactItemize}
+\item 
+wx\+Choice \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_frame_a959ecbe2509bdf348daa2e3cd71ef35b}{m\+\_\+station\+Choice}}
+\item 
+wx\+Choice \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_frame_a52f3da128794d0c9da2b1ed1e63ea5f7}{m\+\_\+measurement\+Choice}}
+\item 
+wx\+Choice \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_frame_a9b7a6146f21704bcb7570e6ea64972da}{m\+\_\+start\+Date\+Time}}
+\item 
+wx\+Choice \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_frame_a5f475248ceb6df66543200adf6e15be4}{m\+\_\+end\+Date\+Time}}
+\item 
+wx\+Text\+Ctrl \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_frame_a62ef67c6ea099cb6d58d8960f3dd0c81}{m\+\_\+data\+Display}}
+\item 
+wx\+Static\+Text \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_frame_a359ea8281648184ca7b79986a55613ba}{m\+\_\+stats\+Text}}
+\item 
+\mbox{\hyperlink{class_graph}{Graph}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_frame_a90308985cd251e48981f241818a198c3}{m\+\_\+graph\+Panel}}
+\item 
+wx\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_frame_a64945315b98abc5bd0e74d9871141255}{m\+\_\+filter\+Button}}
+\item 
+std\+::vector$<$ wx\+Date\+Time $>$ \mbox{\hyperlink{class_main_frame_a928ee7ec763f018b5cb6826c85019ab8}{m\+\_\+date\+Times}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_main_frame_a2c605c4355a5bb4373f79df668f87e98}{m\+\_\+data\+Values}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_main_frame_a878cb91bb5229b263a4bc664bb33c6e3}{m\+\_\+all\+YData}}
+\item 
+std\+::map$<$ wx\+String, int $>$ \mbox{\hyperlink{class_main_frame_ae89239a5bcded9e12ac9de4aeb22aa2f}{m\+\_\+station\+Map}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja konstruktora i destruktora}
+\Hypertarget{class_main_frame_a00c85521dad6b24000967206bcc53688}\index{MainFrame@{MainFrame}!MainFrame@{MainFrame}}
+\index{MainFrame@{MainFrame}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{MainFrame()}{MainFrame()}}
+{\footnotesize\ttfamily \label{class_main_frame_a00c85521dad6b24000967206bcc53688} 
+Main\+Frame\+::\+Main\+Frame (\begin{DoxyParamCaption}\item[{const wx\+String \&}]{title}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\Hypertarget{class_main_frame_a6c27ee30e76a4677a56f1bc7bd4dedd6}\index{MainFrame@{MainFrame}!onAcceptClick@{onAcceptClick}}
+\index{onAcceptClick@{onAcceptClick}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{onAcceptClick()}{onAcceptClick()}}
+{\footnotesize\ttfamily \label{class_main_frame_a6c27ee30e76a4677a56f1bc7bd4dedd6} 
+void Main\+Frame\+::on\+Accept\+Click (\begin{DoxyParamCaption}\item[{wx\+Command\+Event \&}]{evt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_frame_acf3b2061315ea208bcd2a09ca56fa3a8}\index{MainFrame@{MainFrame}!onClose@{onClose}}
+\index{onClose@{onClose}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{onClose()}{onClose()}}
+{\footnotesize\ttfamily \label{class_main_frame_acf3b2061315ea208bcd2a09ca56fa3a8} 
+void Main\+Frame\+::on\+Close (\begin{DoxyParamCaption}\item[{wx\+Close\+Event \&}]{evt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_frame_af6f91851c05b34671fcfa631de4c9cbc}\index{MainFrame@{MainFrame}!OnDisplayDataThreadEvent@{OnDisplayDataThreadEvent}}
+\index{OnDisplayDataThreadEvent@{OnDisplayDataThreadEvent}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{OnDisplayDataThreadEvent()}{OnDisplayDataThreadEvent()}}
+{\footnotesize\ttfamily \label{class_main_frame_af6f91851c05b34671fcfa631de4c9cbc} 
+void Main\+Frame\+::\+On\+Display\+Data\+Thread\+Event (\begin{DoxyParamCaption}\item[{wx\+Thread\+Event \&}]{evt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_frame_a57733c2a6f23b97a52316a77b8074f91}\index{MainFrame@{MainFrame}!onFilterClick@{onFilterClick}}
+\index{onFilterClick@{onFilterClick}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{onFilterClick()}{onFilterClick()}}
+{\footnotesize\ttfamily \label{class_main_frame_a57733c2a6f23b97a52316a77b8074f91} 
+void Main\+Frame\+::on\+Filter\+Click (\begin{DoxyParamCaption}\item[{wx\+Command\+Event \&}]{evt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_frame_a1c14bf6ae41fa729b9ca1ef0e44d4d66}\index{MainFrame@{MainFrame}!onStationSelect@{onStationSelect}}
+\index{onStationSelect@{onStationSelect}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{onStationSelect()}{onStationSelect()}}
+{\footnotesize\ttfamily \label{class_main_frame_a1c14bf6ae41fa729b9ca1ef0e44d4d66} 
+void Main\+Frame\+::on\+Station\+Select (\begin{DoxyParamCaption}\item[{wx\+Command\+Event \&}]{evt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_frame_aead6e28bdc0a15d530a842dd239946fd}\index{MainFrame@{MainFrame}!OnUpdateGraphThreadEvent@{OnUpdateGraphThreadEvent}}
+\index{OnUpdateGraphThreadEvent@{OnUpdateGraphThreadEvent}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{OnUpdateGraphThreadEvent()}{OnUpdateGraphThreadEvent()}}
+{\footnotesize\ttfamily \label{class_main_frame_aead6e28bdc0a15d530a842dd239946fd} 
+void Main\+Frame\+::\+On\+Update\+Graph\+Thread\+Event (\begin{DoxyParamCaption}\item[{wx\+Thread\+Event \&}]{evt}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Dokumentacja atrybutów składowych}
+\Hypertarget{class_main_frame_a878cb91bb5229b263a4bc664bb33c6e3}\index{MainFrame@{MainFrame}!m\_allYData@{m\_allYData}}
+\index{m\_allYData@{m\_allYData}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{m\_allYData}{m\_allYData}}
+{\footnotesize\ttfamily \label{class_main_frame_a878cb91bb5229b263a4bc664bb33c6e3} 
+std\+::vector$<$double$>$ Main\+Frame\+::m\+\_\+all\+YData\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_frame_a62ef67c6ea099cb6d58d8960f3dd0c81}\index{MainFrame@{MainFrame}!m\_dataDisplay@{m\_dataDisplay}}
+\index{m\_dataDisplay@{m\_dataDisplay}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{m\_dataDisplay}{m\_dataDisplay}}
+{\footnotesize\ttfamily \label{class_main_frame_a62ef67c6ea099cb6d58d8960f3dd0c81} 
+wx\+Text\+Ctrl\texorpdfstring{$\ast$}{*} Main\+Frame\+::m\+\_\+data\+Display\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_frame_a2c605c4355a5bb4373f79df668f87e98}\index{MainFrame@{MainFrame}!m\_dataValues@{m\_dataValues}}
+\index{m\_dataValues@{m\_dataValues}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{m\_dataValues}{m\_dataValues}}
+{\footnotesize\ttfamily \label{class_main_frame_a2c605c4355a5bb4373f79df668f87e98} 
+std\+::vector$<$double$>$ Main\+Frame\+::m\+\_\+data\+Values\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_frame_a928ee7ec763f018b5cb6826c85019ab8}\index{MainFrame@{MainFrame}!m\_dateTimes@{m\_dateTimes}}
+\index{m\_dateTimes@{m\_dateTimes}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{m\_dateTimes}{m\_dateTimes}}
+{\footnotesize\ttfamily \label{class_main_frame_a928ee7ec763f018b5cb6826c85019ab8} 
+std\+::vector$<$wx\+Date\+Time$>$ Main\+Frame\+::m\+\_\+date\+Times\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_frame_a5f475248ceb6df66543200adf6e15be4}\index{MainFrame@{MainFrame}!m\_endDateTime@{m\_endDateTime}}
+\index{m\_endDateTime@{m\_endDateTime}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{m\_endDateTime}{m\_endDateTime}}
+{\footnotesize\ttfamily \label{class_main_frame_a5f475248ceb6df66543200adf6e15be4} 
+wx\+Choice\texorpdfstring{$\ast$}{*} Main\+Frame\+::m\+\_\+end\+Date\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_frame_a64945315b98abc5bd0e74d9871141255}\index{MainFrame@{MainFrame}!m\_filterButton@{m\_filterButton}}
+\index{m\_filterButton@{m\_filterButton}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{m\_filterButton}{m\_filterButton}}
+{\footnotesize\ttfamily \label{class_main_frame_a64945315b98abc5bd0e74d9871141255} 
+wx\+Button\texorpdfstring{$\ast$}{*} Main\+Frame\+::m\+\_\+filter\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_frame_a90308985cd251e48981f241818a198c3}\index{MainFrame@{MainFrame}!m\_graphPanel@{m\_graphPanel}}
+\index{m\_graphPanel@{m\_graphPanel}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{m\_graphPanel}{m\_graphPanel}}
+{\footnotesize\ttfamily \label{class_main_frame_a90308985cd251e48981f241818a198c3} 
+\mbox{\hyperlink{class_graph}{Graph}}\texorpdfstring{$\ast$}{*} Main\+Frame\+::m\+\_\+graph\+Panel\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_frame_a52f3da128794d0c9da2b1ed1e63ea5f7}\index{MainFrame@{MainFrame}!m\_measurementChoice@{m\_measurementChoice}}
+\index{m\_measurementChoice@{m\_measurementChoice}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{m\_measurementChoice}{m\_measurementChoice}}
+{\footnotesize\ttfamily \label{class_main_frame_a52f3da128794d0c9da2b1ed1e63ea5f7} 
+wx\+Choice\texorpdfstring{$\ast$}{*} Main\+Frame\+::m\+\_\+measurement\+Choice\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_frame_a9b7a6146f21704bcb7570e6ea64972da}\index{MainFrame@{MainFrame}!m\_startDateTime@{m\_startDateTime}}
+\index{m\_startDateTime@{m\_startDateTime}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{m\_startDateTime}{m\_startDateTime}}
+{\footnotesize\ttfamily \label{class_main_frame_a9b7a6146f21704bcb7570e6ea64972da} 
+wx\+Choice\texorpdfstring{$\ast$}{*} Main\+Frame\+::m\+\_\+start\+Date\+Time\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_frame_a959ecbe2509bdf348daa2e3cd71ef35b}\index{MainFrame@{MainFrame}!m\_stationChoice@{m\_stationChoice}}
+\index{m\_stationChoice@{m\_stationChoice}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{m\_stationChoice}{m\_stationChoice}}
+{\footnotesize\ttfamily \label{class_main_frame_a959ecbe2509bdf348daa2e3cd71ef35b} 
+wx\+Choice\texorpdfstring{$\ast$}{*} Main\+Frame\+::m\+\_\+station\+Choice\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_frame_ae89239a5bcded9e12ac9de4aeb22aa2f}\index{MainFrame@{MainFrame}!m\_stationMap@{m\_stationMap}}
+\index{m\_stationMap@{m\_stationMap}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{m\_stationMap}{m\_stationMap}}
+{\footnotesize\ttfamily \label{class_main_frame_ae89239a5bcded9e12ac9de4aeb22aa2f} 
+std\+::map$<$wx\+String, int$>$ Main\+Frame\+::m\+\_\+station\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{class_main_frame_a359ea8281648184ca7b79986a55613ba}\index{MainFrame@{MainFrame}!m\_statsText@{m\_statsText}}
+\index{m\_statsText@{m\_statsText}!MainFrame@{MainFrame}}
+\doxysubsubsection{\texorpdfstring{m\_statsText}{m\_statsText}}
+{\footnotesize\ttfamily \label{class_main_frame_a359ea8281648184ca7b79986a55613ba} 
+wx\+Static\+Text\texorpdfstring{$\ast$}{*} Main\+Frame\+::m\+\_\+stats\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/szara/source/repos/\+Mc\+Kimo2003/\+JPO/\+First\+GUI/\mbox{\hyperlink{_main_frame_8h}{Main\+Frame.\+h}}\item 
+C\+:/\+Users/szara/source/repos/\+Mc\+Kimo2003/\+JPO/\+First\+GUI/\mbox{\hyperlink{_main_frame_8cpp}{Main\+Frame.\+cpp}}\end{DoxyCompactItemize}

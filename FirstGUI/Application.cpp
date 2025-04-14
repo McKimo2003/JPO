@@ -10,7 +10,7 @@ using namespace std;
 
 wxIMPLEMENT_APP(GUI);
 
-//GUI z wxwidgets - takie jak wielkosc
+//GUI z wxwidgets - rzeczy takie jak wielkosc
 bool GUI::OnInit() {
     MainFrame* mainFrame = new MainFrame("Stacje pogodowe - Projekt JPO");
     mainFrame->SetClientSize(1600, 900);
@@ -24,6 +24,7 @@ size_t App::WriteCallback(void* contents, size_t size, size_t nmemb, void* userp
     return size * nmemb;
 }
 bool App::performCurlRequest(const string& url, string& response) {
+    //Wyj¹tek
     try {
     CURL* curl = curl_easy_init();
     if (!curl) {

@@ -1,0 +1,56 @@
+\doxysection{Dokumentacja pliku C\+:/\+Users/szara/source/repos/\+Mc\+Kimo2003/\+JPO/\+First\+GUI/\+Main.cpp}
+\hypertarget{_main_8cpp}{}\label{_main_8cpp}\index{C:/Users/szara/source/repos/McKimo2003/JPO/FirstGUI/Main.cpp@{C:/Users/szara/source/repos/McKimo2003/JPO/FirstGUI/Main.cpp}}
+{\ttfamily \#include $<$wx/wx.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsubsection*{Komponenty}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_app}{App}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_main_8cpp_a40572d9c575ce763260aed77df8872ff}{wx\+IMPLEMENT\+\_\+\+APP}} (\mbox{\hyperlink{class_app}{App}})
+\item 
+size\+\_\+t \mbox{\hyperlink{_main_8cpp_aca9a64d478c64568f94626641c73bd30}{Write\+Callback}} (void \texorpdfstring{$\ast$}{*}contents, size\+\_\+t size, size\+\_\+t nmemb, void \texorpdfstring{$\ast$}{*}userp)
+\item 
+bool \mbox{\hyperlink{_main_8cpp_af990b2e9ea8140909bd46b63bc88695b}{perform\+Curl\+Request}} (const string \&url, string \&response)
+\item 
+bool \mbox{\hyperlink{_main_8cpp_a5eb5f4ad50a828663bc37dab369102e1}{parse\+Json\+Response}} (const string \&json\+Response, Json\+::\+Value \&parsed\+Root)
+\item 
+int \mbox{\hyperlink{_main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\Hypertarget{_main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{Main.cpp@{Main.cpp}!main@{main}}
+\index{main@{main}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_main_8cpp_a5eb5f4ad50a828663bc37dab369102e1}\index{Main.cpp@{Main.cpp}!parseJsonResponse@{parseJsonResponse}}
+\index{parseJsonResponse@{parseJsonResponse}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{parseJsonResponse()}{parseJsonResponse()}}
+{\footnotesize\ttfamily \label{_main_8cpp_a5eb5f4ad50a828663bc37dab369102e1} 
+bool parse\+Json\+Response (\begin{DoxyParamCaption}\item[{const string \&}]{json\+Response}{, }\item[{Json\+::\+Value \&}]{parsed\+Root}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_main_8cpp_af990b2e9ea8140909bd46b63bc88695b}\index{Main.cpp@{Main.cpp}!performCurlRequest@{performCurlRequest}}
+\index{performCurlRequest@{performCurlRequest}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{performCurlRequest()}{performCurlRequest()}}
+{\footnotesize\ttfamily \label{_main_8cpp_af990b2e9ea8140909bd46b63bc88695b} 
+bool perform\+Curl\+Request (\begin{DoxyParamCaption}\item[{const string \&}]{url}{, }\item[{string \&}]{response}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_main_8cpp_aca9a64d478c64568f94626641c73bd30}\index{Main.cpp@{Main.cpp}!WriteCallback@{WriteCallback}}
+\index{WriteCallback@{WriteCallback}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{WriteCallback()}{WriteCallback()}}
+{\footnotesize\ttfamily \label{_main_8cpp_aca9a64d478c64568f94626641c73bd30} 
+size\+\_\+t Write\+Callback (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{contents}{, }\item[{size\+\_\+t}]{size}{, }\item[{size\+\_\+t}]{nmemb}{, }\item[{void \texorpdfstring{$\ast$}{*}}]{userp}{}\end{DoxyParamCaption})}
+
+\Hypertarget{_main_8cpp_a40572d9c575ce763260aed77df8872ff}\index{Main.cpp@{Main.cpp}!wxIMPLEMENT\_APP@{wxIMPLEMENT\_APP}}
+\index{wxIMPLEMENT\_APP@{wxIMPLEMENT\_APP}!Main.cpp@{Main.cpp}}
+\doxysubsubsection{\texorpdfstring{wxIMPLEMENT\_APP()}{wxIMPLEMENT\_APP()}}
+{\footnotesize\ttfamily \label{_main_8cpp_a40572d9c575ce763260aed77df8872ff} 
+wx\+IMPLEMENT\+\_\+\+APP (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_app}{App}}}]{}{}\end{DoxyParamCaption})}
+

@@ -42,4 +42,8 @@ private:
 	void onClose(wxCloseEvent& evt);
 	void onStationSelect(wxCommandEvent& evt);
 	void onFilterClick(wxCommandEvent& evt);
+
+	//Obsluga wielu w¹tków (osobny watek na wyswietlanie danych i osobny na wykres
+	void OnDisplayDataThreadEvent(wxThreadEvent& evt);
+	void OnUpdateGraphThreadEvent(wxThreadEvent& evt);
 };

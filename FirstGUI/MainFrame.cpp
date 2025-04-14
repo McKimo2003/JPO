@@ -5,11 +5,23 @@
 #include <json/json.h>
 #include <wx/wx.h>
 
+#include <thread>
+
 using namespace std;
+
+//Zmienne do obs³ugi wilu w¹tków  - ID eventów
+enum {
+	ID_EVENT_DISPLAY_DATA = wxID_HIGHEST + 1,
+	ID_EVENT_UPDATE_GRAPH
+};
 
 MainFrame::MainFrame(const wxString& title) :wxFrame(nullptr, wxID_ANY, title) { //GUI
 	wxPanel* panel = new wxPanel(this); //panel g³ówny
 	
+	//Watki - 
+	Bind(wxEVT_THREAD, &MainFrame::OnDisplayDataThreadEvent, this, ID_EVENT_DISPLAY_DATA);
+	Bind(wxEVT_THREAD, &MainFrame::OnUpdateGraphThreadEvent, this, ID_EVENT_UPDATE_GRAPH);
+
 	//BoxSizer(obszar)
 	wxBoxSizer* boxSizer = new wxBoxSizer(wxVERTICAL);
 	wxSizerFlags flags = wxSizerFlags().Left().Border(wxALL, 10); //wyrównanie oraz jaka odleglosc od kazdej krawedzi
@@ -180,7 +192,7 @@ void MainFrame::onAcceptClick(wxCommandEvent& evt) {
 	const Json::Value& values = dataRoot["values"];
 	wxString display;
 
-	//Tworzenie pola vecotora(tablicy) z danymi osie X i Y
+	//Tworzenie pola vectora(tablicy) z danymi osie X i Y
 	vector<double> xData, yData;
 
 	m_dateTimes.clear();
@@ -238,8 +250,21 @@ void MainFrame::onAcceptClick(wxCommandEvent& evt) {
 		}
 	}
 
+	//Dodanie obs³ugi wielu w¹tków (jeden w¹tek odpowiedzialny za wykres, drugi w¹tek odpowiedzialny za tekst z danymi
 	if (m_dateTimes.size() == m_allYData.size() && !m_allYData.empty()) {
-		m_dataDisplay->SetValue(display);
+		thread textThread([=]() {
+			wxThreadEvent* evt = new wxThreadEvent(wxEVT_THREAD, ID_EVENT_DISPLAY_DATA);
+			evt->SetString(display);
+			wxQueueEvent(this, evt);
+			});
+		thread graphThread([=]() {
+			wxThreadEvent* evt = new wxThreadEvent(wxEVT_THREAD, ID_EVENT_UPDATE_GRAPH);
+			evt->SetPayload(make_pair(xData, yData));
+			wxQueueEvent(this, evt);
+			});
+
+		textThread.detach();
+		graphThread.detach();
 	}
 	else {
 		wxLogMessage("Dane nie s¹ kompletne. - podaj zakres dat");
@@ -271,7 +296,7 @@ void MainFrame::onFilterClick(wxCommandEvent& evt) {
 		return;
 	}
 
-	std::vector<double> filteredX, filteredY;
+	vector<double> filteredX, filteredY;
 	wxString filteredDisplay;
 	int index = 0;
 
@@ -310,7 +335,7 @@ void MainFrame::onFilterClick(wxCommandEvent& evt) {
 
 	//Min i max wykresu - po dodaniu filtracji odpowiedniej
 	if (!filteredY.empty()) {
-		auto minmax = std::minmax_element(filteredY.begin(), filteredY.end());
+		auto minmax = minmax_element(filteredY.begin(), filteredY.end());
 		wxString stats = wxString::Format("Min: %.2f | Max: %.2f", *minmax.first, *minmax.second);
 		m_statsText->SetLabel(stats);
 	}
@@ -348,4 +373,14 @@ void MainFrame::onStationSelect(wxCommandEvent& evt) {
 	else {
 		wxLogMessage("B³¹d pobierania danych sensorycznych");
 	}
+}
+
+void MainFrame::OnDisplayDataThreadEvent(wxThreadEvent& evt) {
+	wxString text = evt.GetString();
+	m_dataDisplay->SetValue(text);
+}
+
+void MainFrame::OnUpdateGraphThreadEvent(wxThreadEvent& evt) {
+	auto dataPair = evt.GetPayload<pair<vector<double>, vector<double>>>();
+	m_graphPanel->SetData(dataPair.first, dataPair.second);
 }

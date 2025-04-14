@@ -1,0 +1,32 @@
+\doxysection{Graph.\+h}
+\hypertarget{_graph_8h_source}{}\label{_graph_8h_source}\index{C:/Users/szara/source/repos/McKimo2003/JPO/FirstGUI/Graph.h@{C:/Users/szara/source/repos/McKimo2003/JPO/FirstGUI/Graph.h}}
+\mbox{\hyperlink{_graph_8h}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <wx/wx.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_graph_a4eea7f5aea69c2b2b0cfa38b97e50935}{Graph}}\ :\ \textcolor{keyword}{public}\ wxPanel}
+\DoxyCodeLine{00006\ \{}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_graph_ab61aae3644a28c178097bbdf81581130}{m\_hasData}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00010\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{class_graph_a759e91f1f21592242ae9d43bb1e8e925}{m\_xData}};}
+\DoxyCodeLine{00011\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{class_graph_aedecf3b52ccc8f7e7cfb6c2a00c95f52}{m\_yData}};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{class_graph_a4eea7f5aea69c2b2b0cfa38b97e50935}{Graph}}(wxWindow*\ parent);}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_afe334a701cb35cfe2e8863c1ba2e3ee4}{SetData}}(\textcolor{keyword}{const}\ std::vector<double>\&\ x,\ \textcolor{keyword}{const}\ std::vector<double>\&\ y);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_graph_a631cc17bd92d02a8e4870518520e6f3e}{OnPaint}}(wxPaintEvent\&\ event);}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<double>\&\ \mbox{\hyperlink{class_graph_a03cb131b98eb9584a50424c4fb8a1111}{getY}}()\textcolor{keyword}{const}\{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_graph_aedecf3b52ccc8f7e7cfb6c2a00c95f52}{m\_yData}};}
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<double>\&\ \mbox{\hyperlink{class_graph_a3fd7d216b8698caf370fb2ed36585ea4}{getX}}()\textcolor{keyword}{const}\{}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_graph_a759e91f1f21592242ae9d43bb1e8e925}{m\_xData}};}
+\DoxyCodeLine{00024\ \ \ \ \ \}}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+
+\end{DoxyCode}

@@ -1,0 +1,55 @@
+\doxysection{Main\+Frame.\+h}
+\hypertarget{_main_frame_8h_source}{}\label{_main_frame_8h_source}\index{C:/Users/szara/source/repos/McKimo2003/JPO/FirstGUI/MainFrame.h@{C:/Users/szara/source/repos/McKimo2003/JPO/FirstGUI/MainFrame.h}}
+\mbox{\hyperlink{_main_frame_8h}{IdÅº do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <wx/wx.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_graph_8h}{Graph.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_frame_a00c85521dad6b24000967206bcc53688}{MainFrame}}\ :\ \textcolor{keyword}{public}\ wxFrame}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{class_main_frame_a00c85521dad6b24000967206bcc53688}{MainFrame}}(\textcolor{keyword}{const}\ wxString\&\ title);}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{comment}{//Wybory\ stacji,\ wyswietlanie\ tekstow\ -\/\ wskazniki}}
+\DoxyCodeLine{00014\ \ \ \ \ wxChoice*\ \mbox{\hyperlink{class_main_frame_a959ecbe2509bdf348daa2e3cd71ef35b}{m\_stationChoice}};}
+\DoxyCodeLine{00015\ \ \ \ \ wxChoice*\ \mbox{\hyperlink{class_main_frame_a52f3da128794d0c9da2b1ed1e63ea5f7}{m\_measurementChoice}};}
+\DoxyCodeLine{00016\ \ \ \ \ wxChoice*\ \mbox{\hyperlink{class_main_frame_a9b7a6146f21704bcb7570e6ea64972da}{m\_startDateTime}};}
+\DoxyCodeLine{00017\ \ \ \ \ wxChoice*\ \mbox{\hyperlink{class_main_frame_a5f475248ceb6df66543200adf6e15be4}{m\_endDateTime}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ wxTextCtrl*\ \mbox{\hyperlink{class_main_frame_a62ef67c6ea099cb6d58d8960f3dd0c81}{m\_dataDisplay}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//Min\ i\ max}}
+\DoxyCodeLine{00022\ \ \ \ \ wxStaticText*\ \mbox{\hyperlink{class_main_frame_a359ea8281648184ca7b79986a55613ba}{m\_statsText}};}
+\DoxyCodeLine{00023\ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//Graf}}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_graph}{Graph}}*\ \mbox{\hyperlink{class_main_frame_a90308985cd251e48981f241818a198c3}{m\_graphPanel}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//Przycisk\ do\ filtrowania\ danych\ (zakres)}}
+\DoxyCodeLine{00028\ \ \ \ \ wxButton*\ \mbox{\hyperlink{class_main_frame_a64945315b98abc5bd0e74d9871141255}{m\_filterButton}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//Czas\ i\ dane\ (do\ wyboru\ zakresu)}}
+\DoxyCodeLine{00031\ \ \ \ \ std::vector<wxDateTime>\ \mbox{\hyperlink{class_main_frame_a928ee7ec763f018b5cb6826c85019ab8}{m\_dateTimes}};}
+\DoxyCodeLine{00032\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{class_main_frame_a2c605c4355a5bb4373f79df668f87e98}{m\_dataValues}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{comment}{//Wszystkie\ wartosci\ (potrzebe\ do\ filtrowania\ -\/\ wartosci\ wszystkie\ i\ filtrowane}}
+\DoxyCodeLine{00035\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{class_main_frame_a878cb91bb5229b263a4bc664bb33c6e3}{m\_allYData}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//Id\ Stacji}}
+\DoxyCodeLine{00038\ \ \ \ \ std::map<wxString,\ int>\ \mbox{\hyperlink{class_main_frame_ae89239a5bcded9e12ac9de4aeb22aa2f}{m\_stationMap}};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//Eventy\ np:\ klikanie,\ zamykanie,\ wybor}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_frame_a6c27ee30e76a4677a56f1bc7bd4dedd6}{onAcceptClick}}(wxCommandEvent\&\ evt);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_frame_acf3b2061315ea208bcd2a09ca56fa3a8}{onClose}}(wxCloseEvent\&\ evt);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_frame_a1c14bf6ae41fa729b9ca1ef0e44d4d66}{onStationSelect}}(wxCommandEvent\&\ evt);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_frame_a57733c2a6f23b97a52316a77b8074f91}{onFilterClick}}(wxCommandEvent\&\ evt);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{comment}{//Obsluga\ wielu\ w¹tków (osobny\ watek\ na\ wyswietlanie\ danych\ i\ osobny\ na\ wykres}}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_frame_af6f91851c05b34671fcfa631de4c9cbc}{OnDisplayDataThreadEvent}}(wxThreadEvent\&\ evt);}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_frame_aead6e28bdc0a15d530a842dd239946fd}{OnUpdateGraphThreadEvent}}(wxThreadEvent\&\ evt);}
+\DoxyCodeLine{00049\ \};}
+
+\end{DoxyCode}
